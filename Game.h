@@ -1,6 +1,6 @@
-char board[3][3];
-const char PLAYER = 'X';
-const char COMPUTER = 'O';
+#pragma once
+#ifndef GAME_H
+#define GAME_H
 
 void resetBoard();
 void printBoard();
@@ -10,3 +10,4 @@ void playerMove();
 char checkWin();
 void printWinner(char);
 
+#endif

@@ -3,6 +3,9 @@
 #include "Game.h"
 
 
+char board[3][3];
+const char PLAYER = 'X';
+const char COMPUTER = 'O';
 
 void resetBoard(){
     for(int i =0; i < 3; i++){
@@ -13,6 +16,8 @@ void resetBoard(){
 };
 
 
+
+
 void printBoard(){
     printf(" %c | %c | %c ", board[0][0], board[0][1], board[0][2]);
     printf("\n---|---|---\n");
@@ -21,6 +26,9 @@ void printBoard(){
     printf(" %c | %c | %c ", board[2][0], board[2][1], board[2][2]);
     printf("\n");
 };
+
+
+
 
 
 int checkFreeSpaces(){
@@ -35,6 +43,9 @@ int checkFreeSpaces(){
     }
     return freeSpaces;
 };
+
+
+
 
 
 void playerMove(){
@@ -61,6 +72,11 @@ void playerMove(){
 
 };
 
+
+
+
+
+
 void computerMove(){
 
     //creates a seed based on current time
@@ -80,6 +96,12 @@ void computerMove(){
         printWinner(' ');
     }
 };
+
+
+
+
+
+
 
 char checkWin(){
 
@@ -107,6 +129,11 @@ char checkWin(){
 
     return ' ';
 };   
+
+
+
+
+
 
 void printWinner(char winner){
 

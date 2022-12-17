@@ -13,7 +13,14 @@ int main(int argc, char *argv[]) {
 
     while(winner == ' ' && checkFreeSpaces() != 0){
         printBoard();
+        
         playerMove();
+        winner = checkWin();
+        if(winner != ' ' || checkFreeSpaces() == 0){
+            break;
+        }
+
+        computerMove();
         winner = checkWin();
         if(winner != ' ' || checkFreeSpaces() == 0){
             break;
